@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\j.campbell\\.nuget\\packages\\": {}
+    "C:\\Users\\jpang18\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\kings.internal\\Staff$\\j.campbell\\Documents\\C# Projects\\Searching Algorithms\\Searching Algorithms.csproj",
+      "projectUniqueName": "C:\\Users\\jpang18\\Documents\\Compsci\\SearchAlgorithms\\Searching Algorithms.csproj",
       "projectName": "Searching Algorithms",
-      "projectPath": "\\\\kings.internal\\Staff$\\j.campbell\\Documents\\C# Projects\\Searching Algorithms\\Searching Algorithms.csproj",
-      "packagesPath": "C:\\Users\\j.campbell\\.nuget\\packages\\",
-      "outputPath": "\\\\kings.internal\\Staff$\\j.campbell\\Documents\\C# Projects\\Searching Algorithms\\obj\\",
+      "projectPath": "C:\\Users\\jpang18\\Documents\\Compsci\\SearchAlgorithms\\Searching Algorithms.csproj",
+      "packagesPath": "C:\\Users\\jpang18\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jpang18\\Documents\\Compsci\\SearchAlgorithms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\j.campbell\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jpang18\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

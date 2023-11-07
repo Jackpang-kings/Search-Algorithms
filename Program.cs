@@ -124,11 +124,85 @@ namespace SearchingAlgorithms
             Array.Copy(items, unSortItems, items.Length);
 
             //Add your code here
-
-            Console.WriteLine("Press any key to exit");
-            Console.ReadLine();
-
-
+            string ch;
+            bool resume = true;
+            int num;
+            bool result;
+            while(resume == true){
+                Console.WriteLine("Searching Algorithms");
+                num = CheckInput();
+                Console.WriteLine("1)LinearSearch 2)BinarySearch 3)BinaryTreeSearch 4)Quit");
+                ch = Console.ReadLine()!;
+                if (ch == "1"){
+                    result = LinearSearch(num,unSortItems);
+                }else if (ch == "2"){
+                    result = BinarySearch(num,sortItems);
+                }else if (ch == "3"){
+                    result = BinaryTreeSearch(num,tree);
+                }else{
+                    result = false;
+                    resume = false;
+                }
+                if (result != true){
+                    Console.WriteLine("item not found");
+                }else{
+                    Console.WriteLine("item found");
+                }
+            }
+            }
+            static bool LinearSearch(int n,int[] ints){
+                bool found = false;
+                foreach (int i in ints){
+                    if (n == i){
+                        found = true;
+                    }
+                }
+                return found;
+            }
+            static bool BinarySearch(int n,int[] ints){
+                int low = 0;
+                int upp = ints.Length;
+                bool found = false;
+                int mid;
+                double m;
+                while (found == false && low <= upp){
+                    m = (low + upp)/2;
+                    mid = Convert.ToInt32(Math.Round(m,0));
+                    if (ints[mid] == n){
+                        found = true;
+                    }else if (ints[mid] < n){
+                        low = mid + 1;
+                    }else{
+                        upp = mid - 1;
+                    }
+                }
+                return found;
+            }
+            static bool BinaryTreeSearch(int n, BinaryTree tree){
+                BinaryTreeNode currentNode = tree.Root;
+                bool found = false;
+                while (found == false && currentNode != null){
+                    if (currentNode.Data == n){
+                        found = true;
+                    }else if (currentNode.Data < n){
+                        currentNode = currentNode.Right;
+                    }else if (currentNode.Data > n){
+                        currentNode = currentNode.Left;
+                    }
+                }
+                return found;
+            }
+            static int CheckInput(){
+                bool success = false;
+                int input = 0;
+                while (success == false){
+                    Console.WriteLine("Enter the number you want to search for");
+                    success = int.TryParse(Console.ReadLine(),out input);
+                    if (success != true){
+                        Console.WriteLine("The input is not a integer");
+                    }
+                }
+                return input;
+            }
         }
     }
-}
